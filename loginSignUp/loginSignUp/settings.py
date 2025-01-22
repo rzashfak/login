@@ -56,7 +56,7 @@ ROOT_URLCONF = 'loginSignUp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR /"tamplates"],
+        'DIRS': [BASE_DIR /'base' /"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,3 +123,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "base:home"
+LOGOUT_REDIRECT_URL = "base:login"
